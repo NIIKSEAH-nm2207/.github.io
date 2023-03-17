@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/cafemasterlist.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Source+Sans+Pro&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    </style>
+    <script type="text/javascript" src="/appscripts/main.js">
+    </script>
+
+</head>
+
+<body>
+    <div id="header">
+        Cafe Masterlist
+    </div>
+    <div id="body">
+        <h1>List of Cafes</h1>
+        <h1>List of Cafe Clusters</h1>
+
+        <div id="left">
+            <script>
+                var leftarraytransferred = document.getElementById("left");
+                leftarraytransferred.innerHTML = JSON.parse(localStorage.getItem("leftarray"));
+            </script>
+
+        </div>
+        <div id="right">
+            <a href="/htmls/upperthomsonstretch.html">Upper Thomson Cluster</a>
+        </div>
+    </div>
+
+</body>
+<div id="footer">
+<a href="/indexcorrect.html">Link back to map!</a>
+</div>
+</html>
