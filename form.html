@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head id="head">
+
+    <link rel="stylesheet" type="text/css" href="form/form.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Source+Sans+Pro&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    </style>
+    <script defer type="text/javascript" src="appscripts/main.js"></script>
+
+</head>
+
+<body>
+
+    <h1 id="welcome">Hello! Please input the details of the cafe down below!</h1>
+
+    <form method="form" id="form">
+
+        <h1>Cafe Name<br><input type="text" ; id="cafename"></p>
+            <h1>Longitude<br><input type="number" ; id="longitude" ; step="0.00000000000000001"></p>
+                <h1>Latitude<br><input type="number" ; id="latitude" ; step="0.00000000000000001"></p>
+                    <h1>Content<br><input type="text" ; id="content"></h1>
+                    <p><input type="button" id="submit" value="submit"></p>
+                    <h1 id="status"></h1>
+                    <a href=indexcorrect.html id="back">Back to the map!</a>
+
+    </form>
+
+</body>
+
+<script>
+
+    const form = document.getElementById("form");
+    const cafenamecontent = [];
+    const longitudevalue = [];
+    const latitudevalue = [];
+    const contentcontent = [];
+    const cafename = document.getElementById("cafename");
+    const longitude = document.getElementById("longitude");
+    const latitude = document.getElementById("latitude");
+    const content = document.getElementById("content");
+    const status = document.getElementById("status")
+    submit.addEventListener('click', function (e) {
+        if (cafename.value == "") { alert("no cafe name inserted") } else {
+            cafenamecontent.push(cafename.value);
+            longitudevalue.push(longitude.value);
+            latitudevalue.push(latitude.value);
+            contentcontent.push(content.value);
+
+            //since it is on the global window// 
+            //write to local storage// //first is name, second is value you want to store//
+
+            localStorage.setItem("longitude-value", longitudevalue);
+            localStorage.setItem("latitude-value", latitudevalue);
+            localStorage.setItem("cafe-name", cafenamecontent);
+            localStorage.setItem("cafe-content", contentcontent);
+            status.innerHTML = "You have successfully inputted " + cafenamecontent.length + " cafe(s)"
+
+            alert(' You have inserted a cafe with a name of "' + cafename.value + '" with a longitude value of "' + longitudevalue + '", ' + 'and a latitude value of "' + latitudevalue + '".');
+        }
+    });
+
+</script>
+
+</html>
