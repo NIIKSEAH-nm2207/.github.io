@@ -1,0 +1,52 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(odd) {
+    border: 1px solid white;
+}
+
+tr:nth-child(even) {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}
+
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+#top {
+    display: flex;
+}
+
+#top a {
+    margin-left: auto;
+    margin-top: 40px;
+    ;
+}
+
+#storyboard1,
+#storyboard2 {
+    padding: 10px;
+    width: 50%;
+}
+
+#footer,
+#storyboardtable {
+    padding-top: 100px;
+}
+
+#storyboard {
+    display: flex;
+    padding-top: 100px;
+}
