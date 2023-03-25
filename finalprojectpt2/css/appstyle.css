@@ -1,0 +1,183 @@
+html {
+    overflow: scroll;
+}
+
+body {
+    margin: 0;
+}
+
+.homepage,
+.content {
+    width: 1470px;
+    height: 809px;
+}
+
+.homepage h1 {
+    color: black;
+    font-weight: bold;
+    font-family: Trebuchet MS;
+}
+
+#homepagecontent {
+    position: absolute;
+    top: 0;
+    height: 809px;
+    width: 1470px;
+    display: flex;
+}
+
+/*flex display puts them onto a single line*/
+/*absolute position brings text in front of video*/
+
+#homepagecontentt h1 {
+    position: sticky;
+    top: 0;
+}
+
+/*sticky position allows it to stick when scrolling*/
+
+#homepagecontentt {
+    top: 0;
+    display: flex;
+    width: 1470px;
+    justify-content: space-between;
+}
+
+/*justify-content evens space between items in flex*/
+
+#homepagecontenttt {
+    padding-left: 20px;
+}
+
+/* https://www.w3schools.com/howto/howto_js_dropdown.asp#:~:text=Example%20Explained,dropdown%20menu%20correctly%20with%20CSS. */
+
+.dropdown {
+    display: flex;
+}
+
+#icon {
+    padding-top: 15px;
+}
+
+.dropbutton {
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0%);
+    border: 0px solid transparent;
+    padding-right: 20px;
+    padding-top: 25px;
+    display: flex;
+}
+
+.dropbutton:hover,
+.dropbutton:focus,
+.dropdowncontent a:hover {
+    font-weight: bold;
+}
+
+.dropdowncontent {
+    display: none;
+    position: relative;
+}
+
+.dropdowncontent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* text decoration none removes the blue color and underline that comes with links */
+
+.show {
+    display: block;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#contentleft {
+    position: sticky;
+    top: 405px;
+    bottom: 405px;
+}
+
+#video {
+    width: 1470px;
+    height: 809px;
+    object-fit: cover;
+    filter: opacity(60%);
+}
+
+/* changed opacity of video so it would not be too distracting*/
+
+@media (max-width: 750px) {
+    #background-video {
+        display: none;
+    }
+
+    body {
+        background-size: cover;
+    }
+}
+
+#title {
+    font-size: 50px;
+}
+
+.tab {
+    border: white;
+    color: black;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline;
+}
+
+#datachart {
+    position: relative;
+    height: 80%;
+    width: 80%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(odd) {
+    border: 1px solid white;
+}
+
+tr:nth-child(even) {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}
+
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+#top {
+    display: flex;
+}
+
+#top a {
+    margin-left: auto;
+    margin-top: 40px;
+    ;
+}
