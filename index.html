@@ -1,54 +1,301 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
 
     <link rel="stylesheet" type="text/css" href="css/appstyle.css">
 
-    <script defer type="text/javascript" src="appscripts/main.js">
-    </script>
+    <script defer type="text/javascript" src="appscripts/main.js"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoWwmPuOd7wRGsGfAvpmN4u0nSABG_pUI&callback=initMap"
-        async defer>
-        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
     </style>
 
 </head>
 
-<body id="body">
+<body>
 
-    <div class="container">
+    <div class="homepage">
 
-        <div class="tabs">
+        <video id="video" autoplay loop muted poster="resources/fail.png">
 
-            <div id="title" class="tab">City in a Cafe </div>
-            <a href="../finalprojectpt2/index.html" id="subtabs" class="tab">Link to my new final project</a>
-            <a href="https://docs.google.com/document/d/1QtLNvxV2YXilm86z_ZDQAiFbgVIL3pXol1V0mtgrRsk/edit?usp=sharing"
-                id="subtabs" class="tab">Link to my diary entry</a>
-            <a href="https://nm2207.org/2223S2/e0958068/web/" id="subtabs" class="tab">Link to my website!</a>
-            <a href="../finalproject/htmls/googledocs.html" id="subtabs" class="tab">Google Docs</a>
-            <a href="../finalproject/htmls/progress.html" id="subtabs" class="tab">Final Project Details</a>
-            <a href="../finalproject/htmls/form.html" id="subtabs" class="tab">Suggest a
-                Cafe</a>
-            <a href="../finalproject/htmls/cafemasterlist.html" id="subtabs" class="tab">Cafe Masterlist</a>
-            <a href="../finalproject/htmls/about.html" id="subtabs" class="tab">About Us</a>
-            <a href="htmls/week11progress.html" id="subtabs" class="tab">Week 11 Progress</a>
+            <!--backup image in case video does not load-->
+
+            <source src="resources/video.mp4" type="video/mp4">
+
+        </video>
+
+        <!--https://blog.hubspot.com/website/video-background-css-->
+
+        <div id="homepagecontent">
+
+            <div id="homepagecontentsticky">
+
+                <h1>niik's anime recommendations</h1>
+
+            </div>
+
+            <div class="dropdown">
+
+                <button onclick="dropdown()" class="dropbutton">
+
+                    <img src="resources/anime.png" height=50px; id="icon">
+
+                    <p>menu</p>
+
+                </button>
+
+                <div id="dropdown" class="dropdowncontent">
+
+                    <a href="https://nm2207.org/2223S2/e0958068/web/">Link to my website</a>
+
+                    <a href="/Users/niiky/Desktop/NM2207/web/finalproject/htmls/googledocs.html">Google Docs</a>
+
+                    <a href="progress.html">Final Project Details</a>
+
+                    <a href="https://docs.google.com/document/d/1QtLNvxV2YXilm86z_ZDQAiFbgVIL3pXol1V0mtgrRsk/edit?usp=sharing"
+                        id="subtabs" class="tab">Week 10 Diary</a>
+
+                    <a href="week11progress.html" id="subtabs" class="tab">Week 11 Diary</a>
+
+                    <a href="week12progress.html" id="subtabs" class="tab">Week 12 Diary</a>
+
+                    <!--https://www.w3schools.com/howto/howto_js_dropdown.asp#:~:text=Example%20Explained,dropdown%20menu%20correctly%20with%20CSS.-->
+
+                </div>
+
+            </div>
 
         </div>
 
     </div>
 
+    <div class="content">
+
+        <div id="contentleft">
+
+            <div id="textleftsticky">
+
+                <div id="textleft">
+
+                    <h1>about this website</h1>
+
+                </div>
+
+            </div>
+
+            <img src="resources/aboutus.jpg" id="aboutus">
+
+        </div>
+
+        <div id="contentright">
+
+            <p>I made this website to analyse the data of the top 250 anime of 2023.
+                <br><br> Using this data, I hope to analyse viewers' preferences: be it in terms of type of anime
+                watched (TV, movie, etc.), animation studio (which tells us about art style preference), duration of
+                episodes, or even genre of anime.
+                <br> <br> With this analysis, producers are able to better understand the needs and wants of their
+                audience and make content catered to them.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div id="datachart1">
+
+        <div id="datachart1chart">
+
+            <canvas id="popularitystudio"></canvas>
+
+        </div>
+
+    </div>
+
+    <div id="datachart1anal">
+
+        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
+
+            <!--backup image in case video does not load-->
+
+            <source src="resources/video.mp4" type="video/mp4">
+
+        </video>
+
+        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
+
+            <!--backup image in case video does not load-->
+
+            <source src="resources/video.mp4" type="video/mp4">
+
+        </video>
+
+        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
+
+            <!--backup image in case video does not load-->
+
+            <source src="resources/video.mp4" type="video/mp4">
+
+        </video>
+
+        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
+
+            <!--backup image in case video does not load-->
+
+            <source src="resources/video.mp4" type="video/mp4">
+
+        </video>
+
+        <div id="datachart1container">
+            <p>What does this tell us about consumers' tastes?</p>
+        </div>
+
+        </video>
+
+        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
+
+            <!--backup image in case video does not load-->
+
+            <source src="resources/video.mp4" type="video/mp4">
+
+        </video>
+
+        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
+
+            <!--backup image in case video does not load-->
+
+            <source src="resources/video.mp4" type="video/mp4">
+
+        </video>
+
+        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
+
+            <!--backup image in case video does not load-->
+
+            <source src="resources/video.mp4" type="video/mp4">
+
+        </video>
+
+        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
+
+            <!--backup image in case video does not load-->
+
+            <source src="resources/video.mp4" type="video/mp4">
+
+        </video>
+
+    </div>
+
+    <div id="datachart1final">
+
+        <video id="video" autoplay loop muted poster="resources/fail.png">
+
+            <!--backup image in case video does not load-->
+
+            <source src="resources/video.mp4" type="video/mp4">
+
+        </video>
+
+        <div id="datachart1finalanal">
+
+            <img src="resources/madhouselogo.png" height="50px">
+
+            <br><br>
+            Madhouse took the top spot. Their art style is the most popular amongst animation studios.
+
+        </div>
+
+    </div>
+
+    <div id="datachart2">
+
+        <div id="datachart2chart">
+
+            <canvas id="typeschart" height="809px" width="1470px"></canvas>
+
+        </div>
+
+        <div id="datachart2buttons">
+
+            <button onclick="chartType('bar')" class="buttons" id="bar">Bar Chart</button>
+
+            <button onclick="chartType('pie')" class="buttons" id="pie">Pie Chart</button>
+
+        </div>
+
+    </div>
+
+    <div id="datachart2finalanal">
+
+        <img src="resources/madhouselogo.png" height="50px">
+
+        <br>
+        Madhouse took the top spot. Their art style
+
+    </div>
+
+    <div id="datachart3">
+
+        <div id="datachart3chart">
+
+            <canvas id="durationchart" height="809px" width="1470px"></canvas>
+
+        </div>
+
+        <div id="datachart3buttons">
+
+            <button onclick="chartType('bar')" class="buttons" id="bar">Bar Chart</button>
+
+            <button onclick="chartType('pie')" class="buttons" id="pie">Pie Chart</button>
+
+        </div>
+
+    </div>
+
+    <div id="datachart3finalanal">
+
+        <img src="resources/madhouselogo.png" height="50px">
+
+        <br>
+        Madhouse took the top spot. Their art style
+
+    </div>
+
+    <div id="datachart4">
+
+        <div id="datachart4chart">
+
+            <canvas id="genrechart" height="809px" width="1470px"></canvas>
+
+        </div>
+
+        <div id="datachart4buttons">
+
+            <button onclick="chartType('bar')" class="buttons" id="bar">Bar Chart</button>
+
+            <button onclick="chartType('pie')" class="buttons" id="pie">Pie Chart</button>
+
+        </div>
+
+        <div id="datachart4final">
+
+        </div>
+
+    </div>
+
+    <div id="datachart4finalanal">
+
+        <img src="resources/madhouselogo.png" height="50px">
+
+        <br>
+        Madhouse took the top spot. Their art style
+
     </div>
 
 </body>
-
-<div id="map"></div><input type="button" value="randomize" id="randomize" class="buttons">
-
-<input type="button" value="clear" id="clear" class="buttons">
 
 </html>
