@@ -9,6 +9,8 @@ function dropdown() {
 
 //i used https://www.computerhope.com/cgi-bin/text-tool.pl for easy keying in of data//
 
+//this is where i input all the data into different categories//
+
 const title = [
     "Shingeki+no+Kyojin:+The+Final+Season+-+Kanketsu-hen",
     "Fullmetal+Alchemist:+Brotherhood",
@@ -263,7 +265,6 @@ const title = [
 ];
 
 const genre = [
-    "Genre",
     "Action,+Drama,+Suspense",
     "Action,+Adventure,+Drama,+Fantasy",
     "Action,+Adventure,+Fantasy",
@@ -2366,6 +2367,8 @@ const score = [
     8.29,
 ];
 
+//initializing my arrays before stuffing them//
+
 var top10anime = [];
 
 var anime = [];
@@ -2492,34 +2495,23 @@ var Adventure = [];
 var Music = [];
 var BoysLove = [];
 
+//inputting labels for my charts//
+
 var typelabels = [
     "TV",
-    "OVA",
-    "ONA",
+    "Original Video Animation",
+    "Original Net Animation",
     "Movie",
     "Music",
-    "Special"
+    "Extra Episodes"
 ];
 
 var durationlabels = [
-    "<= 30 minutes",
-    "<= 60 minutes",
-    "<= 90 minutes",
-    "> 90 minutes",
+    "duration <= 30 minutes",
+    "30 minutes < duration <= 60 minutes",
+    "60 minutes < duration <= 90 minutes",
+    "duration > 90 minutes",
 ]
-
-var top10animelabels = [
-    "Jujutsu+Kaisen",
-    "Steins;Gate",
-    "Fullmetal+Alchemist:+Brotherhood",
-    "Shingeki+no+Kyojin",
-    "Death+Note",
-    "Hunter+x+Hunter+(2011)",
-    "One+Punch+Man",
-    "Kimi+no+Na+wa.",
-    "Kimetsu+no+Yaiba",
-    "Shingeki+no+Kyojin+Season+2",
-];
 
 const genrelabel = [
     "Action",
@@ -2546,6 +2538,8 @@ const genrelabel = [
     "BoysLove",
 ];
 
+//using a for loop to run the function for as many times as there are animes//
+
 for (i = 0; i < 250; i++) {
 
     indivanime =
@@ -2560,6 +2554,8 @@ for (i = 0; i < 250; i++) {
         memberss: members[i],
         scoree: score[i],
     },
+
+        //pushing the anime into the arrays if they fall under a certain category//
 
         anime.push(indivanime);
 
@@ -2809,7 +2805,7 @@ for (i = 0; i < 250; i++) {
     if (indivanime.studioo.includes("Zero-G")) {
         ZeroG.push(indivanime)
     };
-    if (indivanime.titlee.includes("Jujutsu+Kaisen")) {
+    if (indivanime.titlee.includes("Gintama°")) {
         top10anime.push(indivanime)
     };
     if (indivanime.titlee.includes("Steins;Gate")) {
@@ -2818,25 +2814,25 @@ for (i = 0; i < 250; i++) {
     if (indivanime.titlee.includes("Fullmetal+Alchemist:+Brotherhood")) {
         top10anime.push(indivanime)
     };
-    if (indivanime.titlee.includes("Shingeki+no+Kyojin")) {
+    if (indivanime.titlee.includes("Shingeki+no+Kyojin:+The+Final+Season+-+Kanketsu-hen")) {
         top10anime.push(indivanime)
     };
-    if (indivanime.titlee.includes("Death+Note")) {
+    if (indivanime.titlee.includes("Gintama:+The+Final")) {
         top10anime.push(indivanime)
     };
     if (indivanime.titlee.includes("Hunter+x+Hunter+(2011)")) {
         top10anime.push(indivanime)
     };
-    if (indivanime.titlee.includes("One+Punch+Man")) {
+    if (indivanime.titlee.includes("Gintama'")) {
         top10anime.push(indivanime)
     };
-    if (indivanime.titlee.includes("Kimi+no+Na+wa.")) {
+    if (indivanime.titlee.includes("Kaguya-sama+wa+Kokurasetai:+Ultra+Romantic")) {
         top10anime.push(indivanime)
     };
-    if (indivanime.titlee.includes("Kimetsu+no+Yaiba")) {
+    if (indivanime.titlee.includes("Bleach:+Sennen+Kessen-hen")) {
         top10anime.push(indivanime)
     };
-    if (indivanime.titlee.includes("Shingeki+no+Kyojin+Season+2")) {
+    if (indivanime.titlee.includes("Shingeki+no+Kyojin+Season+3+Part+2")) {
         top10anime.push(indivanime)
     };
     if (indivanime.durationn <= 30) {
@@ -2916,6 +2912,8 @@ for (i = 0; i < 250; i++) {
     };
 
 }
+
+//inputting how many data points of each category there are//
 
 const genrenumbers = [
     Action.length,
@@ -3039,12 +3037,15 @@ const studionumbers = [
 
 const backgroundcolor = [];
 
+//if studio number = 1, give it the darkest grey//
+
 for (j = 0; j < studiolist.length; j++) {
     if (studionumbers[j] == 1) {
-        backgroundcolor.push("#4f4f4f"); // darkest grey for the lowest value
+        backgroundcolor.push("#4f4f4f");
     } else {
-        var greyValue = Math.max(0, 192 - (studionumbers[j] - 2) * 16); // increase the difference between the RGB values
+        var greyValue = Math.max(0, 192 - (studionumbers[j] - 2) * 16); // increase the difference between the RGB values//
         backgroundcolor.push(`rgb(${greyValue}, ${greyValue}, ${greyValue})`);
+        //push in rgb values into background color for different shades of grey, depending on data point//
     }
 }
 //i used chatgpt cause it's easier//
@@ -3066,8 +3067,6 @@ const popularitystudio = {
         }
     ]
 };
-
-/*https://medium.com/coding-at-dawn/how-to-sort-an-array-numerically-in-javascript-2b22710e3958#:~:text=We%20can%20use%20.,%3Eb%2Da)%20for%20descending%20order.*/
 
 //https://stackoverflow.com/questions/57178499/display-all-labels-in-chart-js//
 
@@ -3105,12 +3104,12 @@ const genredata = {
 };
 
 //https://www.youtube.com/watch?v=jZD43r-hw6Q//
+/* how to change chart types with a button*/
 
 var studioconfig = {
     type: "bar",
     data: popularitystudio,
     options: {
-        backgroundColor: "transparent",
         maintainAspectRatio: false,
         legend: {
             display: false
@@ -3136,10 +3135,10 @@ var studioconfig = {
         },
         title: {
             display: true,
-            text: ["number of top anime produced by each studio"],
+            text: ["number of animes produced by each studio in top 250 rankings"],
             fontSize: 25,
             fontColor: ("black"),
-            fontFamily: "Roboto"
+            fontFamily: "Montserrat"
         },
     }
 };
@@ -3154,24 +3153,28 @@ var horizontalbarconfig = {
             xAxes: [{
                 ticks: {
                     autoSkip: false,
-                    offset: true,
+                    fontFamily: "Roboto"
                 }
             }],
             yAxes: [{
                 scaleLabel: {
                     display: true,
-                    offset: true,
+                    fontFamily: "Roboto"
+                },
+                ticks: {
+                    autoSkip: false,
+                    fontFamily: "Roboto"
                 }
             }]
         },
         legend: {
             display: false
         },
-        responsive: true,
         title: {
             display: true,
             text: "types of animation",
             fontSize: 25,
+            fontFamily: "Montserrat",
             fontColor: "black",
         },
     }
@@ -3186,47 +3189,70 @@ var pieconfig = {
         legend: {
             display: true
         },
-        responsive: true,
         title: {
             display: true,
             text: "types of animation",
             fontSize: 25,
             fontColor: "black",
+            fontFamily: "Montserrat"
         },
     }
 };
 
 var durationconfig = {
-    type: "horizontalBar",
+    type: "doughnut",
     data: durationdata,
     options: {
         maintainAspectRatio: false,
         scaleShowValues: true,
-        scales: {
-            xAxes: [{
-                ticks: {
-                    autoSkip: false,
-                    offset: true,
-                }
-            }],
-            yAxes: [{
-                scaleLabel: {
-                    display: true,
-                    offset: true,
-                }
-            }]
-        },
         legend: {
             display: false
         },
-        responsive: true,
         title: {
             display: true,
             text: "average duration of episodes of most popular anime",
             fontSize: 25,
             fontColor: "black",
+            fontFamily: "Montserrat"
         },
-    }
+    },
+};
+
+var bardatachart3config = {
+    type: "bar",
+    data: durationdata,
+    options: {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    autoSkip: false,
+                    fontFamily: "Roboto"
+                }
+            }],
+            yAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'number of anime',
+                    fontFamily: "Roboto"
+                },
+                ticks: {
+                    fontFamily: "Montserrat"
+                }
+            }]
+        },
+        maintainAspectRatio: false,
+        scaleShowValues: true,
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: "average duration of episodes of most popular anime",
+            fontSize: 25,
+            fontColor: "black",
+            fontFamily: "Montserrat"
+        },
+    },
 };
 
 var genreconfig = {
@@ -3239,25 +3265,49 @@ var genreconfig = {
             xAxes: [{
                 ticks: {
                     autoSkip: false,
-                    offset: true,
+                    fontFamily: "Roboto"
                 }
             }],
             yAxes: [{
                 scaleLabel: {
                     display: true,
-                    offset: true,
+                    fontFamily: "Roboto"
+                },
+                ticks: {
+                    autoSkip: false,
+                    fontFamily: "Roboto"
                 }
-            }]
+            }
+            ]
         },
         legend: {
             display: false
         },
-        responsive: true,
         title: {
             display: true,
             text: "top genres",
             fontSize: 25,
             fontColor: "black",
+            fontFamily: "Montserrat"
+        },
+    }
+};
+
+var genrepieconfig = {
+    type: "pie",
+    data: genredata,
+    options: {
+        maintainAspectRatio: false,
+        scaleShowValues: true,
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: "top genres",
+            fontSize: 25,
+            fontColor: "black",
+            fontFamily: "Montserrat"
         },
     }
 };
@@ -3269,7 +3319,7 @@ let datachart1 = new Chart(
 
 let datachart2 = new Chart(
     document.getElementById("typeschart"),
-    horizontalbarconfig
+    pieconfig
 )
 
 let datachart3 = new Chart(
@@ -3282,8 +3332,7 @@ let datachart4 = new Chart(
     genreconfig
 )
 
-
-function chartType(type) {
+function chartType2(type) {
     if (type == "bar") {
         datachart2.destroy();
         datachart2 = new Chart(
@@ -3300,4 +3349,353 @@ function chartType(type) {
     }
 };
 
+function chartType3(type) {
+    if (type == "doughnut") {
+        datachart3.destroy();
+        datachart3 = new Chart(
+            document.getElementById("durationchart"),
+            bardatachart3config
+        )
+    };
+    if (type == "bardatachart3config") {
+        datachart3.destroy();
+        datachart3 = new Chart(
+            document.getElementById("durationchart"),
+            durationconfig)
+    }
+};
 
+function chartType4(type) {
+    if (type == "pie") {
+        datachart4.destroy();
+        datachart4 = new Chart(
+            document.getElementById("genrechart"),
+            genreconfig
+        )
+    };
+    if (type == "genreconfig") {
+        datachart4.destroy();
+        datachart4 = new Chart(
+            document.getElementById("genrechart"),
+            genrepieconfig)
+    }
+};
+
+window.addEventListener('scroll', function () {
+    var element = document.getElementById('datachart3finalanalysiscontainer');
+    var element2 = document.getElementById('datachart3finalanalysiscontainer2');
+    var position = element.getBoundingClientRect();
+
+    // check if element is visible in viewport
+    if (position.top < window.innerHeight && position.bottom >= 0) {
+        element.style.opacity = 1;
+        element.style.visibility = 'visible';
+        element2.style.opacity = 1;
+        element2.style.visibility = 'visible';
+    } else {
+        element.style.opacity = 0;
+        element.style.visibility = 'hidden';
+        element2.style.opacity = 0;
+        element2.style.visibility = 'hidden';
+    }
+}
+);
+
+window.addEventListener('scroll', function () {
+    var element3 = document.getElementById('datachart4finalfirstimage');
+    var position1 = element3.getBoundingClientRect();
+    // check if element is visible in viewport
+    if (position1.top < window.innerHeight && position1.bottom >= 0) {
+        document.getElementById("datachart4finalfirstimage").style.opacity = 0
+        document.getElementById("datachart4finalsecondimage").style.opacity = 1
+        document.getElementById("datachart4finalsecondimageanalysis").style.opacity = 1
+    } else {
+        document.getElementById("datachart4finalfirstimage").style.opacity = 1
+        document.getElementById("datachart4finalsecondimage").style.opacity = 0
+        document.getElementById("datachart4finalsecondimageanalysis").style.opacity = 0
+    }
+}
+);
+/*https://www.w3schools.com/jsref/prop_element_classlist.asp*/https://www.w3schools.com/jsref/prop_element_classlist.asp*/
+/* === and not =*/
+
+var hxh = document.getElementById("hxh");
+var animephoto = document.getElementById("animephoto")
+var top10title = document.getElementById("top10title")
+var top10genre = document.getElementById("top10genre")
+var top10studio = document.getElementById("top10studio")
+var top10type = document.getElementById("top10type")
+var top10episodes = document.getElementById("top10episodes")
+var top10duration = document.getElementById("top10duration")
+
+var ranking = document.getElementById("ranking")
+
+hxh.addEventListener("mousemove", function (event) {
+    if (event.target === hxh) {
+        hxh.style.opacity = 1;
+        animephoto.src = "./resources/top10hxh.png";
+
+        top10title.innerHTML = top10anime[9].titlee
+        top10genre.innerHTML = top10anime[9].genree
+        top10studio.innerHTML = top10anime[9].studioo
+        top10type.innerHTML = top10anime[9].typee
+        top10episodes.innerHTML = top10anime[9].episodess
+        top10duration.innerHTML = top10anime[9].durationn
+        ranking.innerHTML = 10
+    }
+});
+
+hxh.addEventListener("mouseleave", function (event) {
+    hxh.style.opacity = 0.3;
+    animephoto.src = "resources/fail.jpg";
+    top10title.innerHTML = "";
+    top10genre.innerHTML = ""
+    top10studio.innerHTML = ""
+    top10type.innerHTML = ""
+    top10episodes.innerHTML = ""
+    top10duration.innerHTML = ""
+    ranking.innerHTML = ""
+})
+
+var gintama2 = document.getElementById("gintama2");
+gintama2.addEventListener("mousemove", function (event) {
+    if (event.target === gintama2) {
+        gintama2.style.opacity = 1
+        animephoto.src = "./resources/top10gintama2.webp"
+        top10title.innerHTML = top10anime[8].titlee
+        top10genre.innerHTML = top10anime[8].genree
+        top10studio.innerHTML = top10anime[8].studioo
+        top10type.innerHTML = top10anime[8].typee
+        top10episodes.innerHTML = top10anime[8].episodess
+        top10duration.innerHTML = top10anime[8].durationn
+        ranking.innerHTML = 9
+    }
+});
+
+gintama2.addEventListener("mouseleave", function (event) {
+    gintama2.style.opacity = 0.3;
+    animephoto.src = "resources/fail.jpg"; top10title.innerHTML = "";
+    top10genre.innerHTML = ""
+    top10studio.innerHTML = ""
+    top10type.innerHTML = ""
+    top10episodes.innerHTML = ""
+    top10duration.innerHTML = ""
+    ranking.innerHTML = ""
+})
+
+var gintamafinal = document.getElementById("gintamafinal");
+gintamafinal.addEventListener("mousemove", function (event) {
+    if (event.target === gintamafinal) {
+        gintamafinal.style.opacity = 1
+        animephoto.src = "./resources/top10gintamafinal.jpeg"
+        top10title.innerHTML = top10anime[7].titlee
+        top10genre.innerHTML = top10anime[7].genree
+        top10studio.innerHTML = top10anime[7].studioo
+        top10type.innerHTML = top10anime[7].typee
+        top10episodes.innerHTML = top10anime[7].episodess
+        top10duration.innerHTML = top10anime[7].durationn
+        ranking.innerHTML = 8
+    }
+});
+gintamafinal.addEventListener("mouseleave", function (event) {
+    gintamafinal.style.opacity = 0.3;
+    animephoto.src = "resources/fail.jpg"; top10title.innerHTML = "";
+    top10genre.innerHTML = ""
+    top10studio.innerHTML = ""
+    top10type.innerHTML = ""
+    top10episodes.innerHTML = ""
+    top10duration.innerHTML = ""
+    ranking.innerHTML = ""
+})
+
+var aot2 = document.getElementById("aot2");
+aot2.addEventListener("mousemove", function (event) {
+    if (event.target === aot2) {
+        aot2.style.opacity = 1
+        animephoto.src = "./resources/top10aot2.webp"
+        top10title.innerHTML = top10anime[6].titlee
+        top10genre.innerHTML = top10anime[6].genree
+        top10studio.innerHTML = top10anime[6].studioo
+        top10type.innerHTML = top10anime[6].typee
+        top10episodes.innerHTML = top10anime[6].episodess
+        top10duration.innerHTML = top10anime[6].durationn
+        ranking.innerHTML = 7
+    }
+});
+aot2.addEventListener("mouseleave", function (event) {
+    aot2.style.opacity = 0.3;
+    animephoto.src = "resources/fail.jpg"; top10title.innerHTML = "";
+    top10genre.innerHTML = ""
+    top10studio.innerHTML = ""
+    top10type.innerHTML = ""
+    top10episodes.innerHTML = ""
+    top10duration.innerHTML = ""
+    ranking.innerHTML = ""
+})
+
+var kaguya = document.getElementById("kaguya");
+kaguya.addEventListener("mousemove", function (event) {
+    if (event.target === kaguya) {
+        kaguya.style.opacity = 1
+        animephoto.src = "./resources/top10kaguya.webp"
+        top10title.innerHTML = top10anime[5].titlee
+        top10genre.innerHTML = top10anime[5].genree
+        top10studio.innerHTML = top10anime[5].studioo
+        top10type.innerHTML = top10anime[5].typee
+        top10episodes.innerHTML = top10anime[5].episodess
+        top10duration.innerHTML = top10anime[5].durationn
+        ranking.innerHTML = 6
+    }
+});
+kaguya.addEventListener("mouseleave", function (event) {
+    kaguya.style.opacity = 0.3;
+    animephoto.src = "resources/fail.jpg"; top10title.innerHTML = "";
+    top10genre.innerHTML = ""
+    top10studio.innerHTML = ""
+    top10type.innerHTML = ""
+    top10episodes.innerHTML = ""
+    top10duration.innerHTML = ""
+    ranking.innerHTML = ""
+})
+
+var gintama = document.getElementById("gintama");
+gintama.addEventListener("mousemove", function (event) {
+    if (event.target === gintama) {
+        gintama.style.opacity = 1;
+        animephoto.src = "./resources/top10gintama.jpeg"
+        top10title.innerHTML = top10anime[4].titlee
+        top10genre.innerHTML = top10anime[4].genree
+        top10studio.innerHTML = top10anime[4].studioo
+        top10type.innerHTML = top10anime[4].typee
+        top10episodes.innerHTML = top10anime[4].episodess
+        top10duration.innerHTML = top10anime[4].durationn
+        ranking.innerHTML = 5
+    }
+});
+gintama.addEventListener("mouseleave", function (event) {
+    gintama.style.opacity = 0.3;
+    animephoto.src = "resources/fail.jpg"; top10title.innerHTML = "";
+    top10genre.innerHTML = ""
+    top10studio.innerHTML = ""
+    top10type.innerHTML = ""
+    top10episodes.innerHTML = ""
+    top10duration.innerHTML = ""
+    ranking.innerHTML = ""
+})
+
+
+var steinsgate = document.getElementById("steinsgate");
+steinsgate.addEventListener("mousemove", function (event) {
+    if (event.target === steinsgate) {
+        steinsgate.style.opacity = 1;
+        animephoto.src = "./resources/top10steinsgate.jpeg"
+        top10title.innerHTML = top10anime[3].titlee
+        top10genre.innerHTML = top10anime[3].genree
+        top10studio.innerHTML = top10anime[3].studioo
+        top10type.innerHTML = top10anime[3].typee
+        top10episodes.innerHTML = top10anime[3].episodess
+        top10duration.innerHTML = top10anime[3].durationn
+        ranking.innerHTML = 4
+    }
+});
+steinsgate.addEventListener("mouseleave", function (event) {
+    steinsgate.style.opacity = 0.3;
+    animephoto.src = "resources/fail.jpg"; top10title.innerHTML = "";
+    top10genre.innerHTML = ""
+    top10studio.innerHTML = ""
+    top10type.innerHTML = ""
+    top10episodes.innerHTML = ""
+    top10duration.innerHTML = ""
+    ranking.innerHTML = ""
+})
+
+var bleach = document.getElementById("bleach");
+bleach.addEventListener("mousemove", function (event) {
+    if (event.target === bleach) {
+        bleach.style.opacity = 1
+        animephoto.src = "./resources/top10bleach.jpeg"
+        top10title.innerHTML = top10anime[2].titlee
+        top10genre.innerHTML = top10anime[2].genree
+        top10studio.innerHTML = top10anime[2].studioo
+        top10type.innerHTML = top10anime[2].typee
+        top10episodes.innerHTML = top10anime[2].episodess
+        top10duration.innerHTML = top10anime[2].durationn
+        ranking.innerHTML = 3
+    }
+});
+bleach.addEventListener("mouseleave", function (event) {
+    bleach.style.opacity = 0.3;
+    animephoto.src = "resources/fail.jpg"; top10title.innerHTML = ""
+    top10genre.innerHTML = ""
+    top10studio.innerHTML = ""
+    top10type.innerHTML = ""
+    top10episodes.innerHTML = ""
+    top10duration.innerHTML = ""
+    ranking.innerHTML = ""
+})
+
+var fullmetal = document.getElementById("fullmetal");
+fullmetal.addEventListener("mousemove", function (event) {
+    if (event.target === fullmetal) {
+        fullmetal.style.opacity = 1
+        animephoto.src = "./resources/top10fullmetal.jpeg"
+        top10title.innerHTML = top10anime[1].titlee
+        top10genre.innerHTML = top10anime[1].genree
+        top10studio.innerHTML = top10anime[1].studioo
+        top10type.innerHTML = top10anime[1].typee
+        top10episodes.innerHTML = top10anime[1].episodess
+        top10duration.innerHTML = top10anime[1].durationn
+        ranking.innerHTML = 2
+    }
+});
+fullmetal.addEventListener("mouseleave", function (event) {
+    fullmetal.style.opacity = 0.3;
+    animephoto.src = "resources/fail.jpg"
+    top10title.innerHTML = ""
+    top10genre.innerHTML = ""
+    top10studio.innerHTML = ""
+    top10type.innerHTML = ""
+    top10episodes.innerHTML = ""
+    top10duration.innerHTML = ""
+    ranking.innerHTML = ""
+})
+
+var aotfinal = document.getElementById("aotfinal");
+aotfinal.addEventListener("mousemove", function (event) {
+    if (event.target === aotfinal) {
+        aotfinal.style.opacity = 1
+        animephoto.src = "./resources/top10aot2.webp"
+        top10title.innerHTML = top10anime[0].titlee
+        top10genre.innerHTML = top10anime[0].genree
+        top10studio.innerHTML = top10anime[0].studioo
+        top10type.innerHTML = top10anime[0].typee
+        top10episodes.innerHTML = top10anime[0].episodess
+        top10duration.innerHTML = top10anime[0].durationn
+        ranking.innerHTML = 1
+    }
+});
+aotfinal.addEventListener("mouseleave", function (event) {
+    aotfinal.style.opacity = 0.3
+    animephoto.src = "resources/fail.jpg"
+    top10title.innerHTML = ""
+    top10genre.innerHTML = ""
+    top10studio.innerHTML = ""
+    top10type.innerHTML = ""
+    top10episodes.innerHTML = ""
+    top10duration.innerHTML = ""
+    ranking.innerHTML = ""
+})
+
+function randomize() {
+    var i = Math.floor(Math.random() * 250)
+    randomtitle.innerHTML = anime[i].titlee
+    randomgenre.innerHTML = anime[i].genree
+    randomstudio.innerHTML = anime[i].studioo
+    randomtype.innerHTML = anime[i].typee
+    randomepisode.innerHTML = anime[i].episodess
+    randomduration.innerHTML = anime[i].durationn
+}
+
+document.getElementById("randomizebutton").addEventListener("click", function () { randomize() })
+
+//making my image act like a button//

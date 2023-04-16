@@ -11,8 +11,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@100&display=swap');
     </style>
+
+    <!--https://fonts.google.com/specimen/Roboto//-->
 
 </head>
 
@@ -20,7 +22,7 @@
 
     <div class="homepage">
 
-        <video id="video" autoplay loop muted poster="resources/fail.png">
+        <video id="video" autoplay loop muted poster="resources/fail.jpg">
 
             <!--backup image in case video does not load-->
 
@@ -34,15 +36,21 @@
 
             <div id="homepagecontentsticky">
 
+                <!--i added the sticky effect as it looks cool-->
+
                 <h1>niik's anime recommendations</h1>
 
             </div>
 
             <div class="dropdown">
 
+                <!--added a dropdown menu so it would not take too much space + organise links to important pages-->
+
                 <button onclick="dropdown()" class="dropbutton">
 
-                    <img src="resources/anime.png" height=50px; id="icon">
+                    <!--added a cute icon to add personality to the menu-->
+
+                    <img src="resources/icon.png" height=50px; id="icon">
 
                     <p>menu</p>
 
@@ -50,9 +58,7 @@
 
                 <div id="dropdown" class="dropdowncontent">
 
-                    <a href="https://nm2207.org/2223S2/e0958068/web/">Link to my website</a>
-
-                    <a href="/Users/niiky/Desktop/NM2207/web/finalproject/htmls/googledocs.html">Google Docs</a>
+                    <a href="https://nm2207.org/2223S2/e0958068/web/">Link to my NM2207 website</a>
 
                     <a href="progress.html">Final Project Details</a>
 
@@ -79,11 +85,7 @@
 
             <div id="textleftsticky">
 
-                <div id="textleft">
-
-                    <h1>about this website</h1>
-
-                </div>
+                <h1>about this website</h1>
 
             </div>
 
@@ -94,10 +96,17 @@
         <div id="contentright">
 
             <p>I made this website to analyse the data of the top 250 anime of 2023.
-                <br><br> Using this data, I hope to analyse viewers' preferences: be it in terms of type of anime
-                watched (TV, movie, etc.), animation studio (which tells us about art style preference), duration of
-                episodes, or even genre of anime.
-                <br> <br> With this analysis, producers are able to better understand the needs and wants of their
+                <br><br>
+                Using this data, I hope to analyse viewers' preferences in terms of
+                <br>
+                <li>type of anime watched (TV, movie, etc.)</li>
+                <br>
+                <li>animation studio (art style preference)</li>
+                <br>
+                <li>duration of episodes</li>
+                <br>
+                <li>genre of anime</li>
+                <br>With this analysis, producers are able to better understand the needs and wants of their
                 audience and make content catered to them.
 
             </p>
@@ -116,98 +125,39 @@
 
     </div>
 
-    <div id="datachart1anal">
+    <div id="datachart1analysis">
 
-        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
+        <img src="resources/haikyuu.png" id="datachart1analysisimg">
 
-            <!--backup image in case video does not load-->
+        <img src="resources/shaft.jpeg" id="datachart1analysisimg">
 
-            <source src="resources/video.mp4" type="video/mp4">
+        <img src="resources/gintama.jpeg" id="datachart1analysisimg">
 
-        </video>
+        <img src="resources/ufotable.webp" id="datachart1analysisimg">
 
-        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
-
-            <!--backup image in case video does not load-->
-
-            <source src="resources/video.mp4" type="video/mp4">
-
-        </video>
-
-        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
-
-            <!--backup image in case video does not load-->
-
-            <source src="resources/video.mp4" type="video/mp4">
-
-        </video>
-
-        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
-
-            <!--backup image in case video does not load-->
-
-            <source src="resources/video.mp4" type="video/mp4">
-
-        </video>
-
-        <div id="datachart1container">
+        <div id="datachart1analysistextcontainer">
             <p>What does this tell us about consumers' tastes?</p>
         </div>
 
-        </video>
+        <img src="resources/witstudio.webp" id="datachart1analysisimg">
 
-        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
+        <img src="resources/a1.jpeg" id="datachart1analysisimg">
 
-            <!--backup image in case video does not load-->
+        <img src="resources/jjk.jpeg" id="datachart1analysisimg">
 
-            <source src="resources/video.mp4" type="video/mp4">
-
-        </video>
-
-        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
-
-            <!--backup image in case video does not load-->
-
-            <source src="resources/video.mp4" type="video/mp4">
-
-        </video>
-
-        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
-
-            <!--backup image in case video does not load-->
-
-            <source src="resources/video.mp4" type="video/mp4">
-
-        </video>
-
-        <video autoplay loop muted poster="resources/fail.png" id="datachart1analvid">
-
-            <!--backup image in case video does not load-->
-
-            <source src="resources/video.mp4" type="video/mp4">
-
-        </video>
+        <img src="resources/clannad.jpeg" id="datachart1analysisimg">
 
     </div>
 
-    <div id="datachart1final">
+    <img src="resources/hxh.gif" id="video">
 
-        <video id="video" autoplay loop muted poster="resources/fail.png">
+    <div id="datachart1finalanalysis">
 
-            <!--backup image in case video does not load-->
+        <img src="resources/madhouselogo.png" height="50px">
 
-            <source src="resources/video.mp4" type="video/mp4">
-
-        </video>
-
-        <div id="datachart1finalanal">
-
-            <img src="resources/madhouselogo.png" height="50px">
-
-            <br><br>
-            Madhouse took the top spot. Their art style is the most popular amongst animation studios.
-
-        </div>
+        <br><br>
+        Madhouse took the top spot.
+        <br> Their art style is the most popular amongst animation studios.
 
     </div>
 
@@ -221,21 +171,23 @@
 
         <div id="datachart2buttons">
 
-            <button onclick="chartType('bar')" class="buttons" id="bar">Bar Chart</button>
+            <img src="resources/killua.jpeg" height=50px;>
 
-            <button onclick="chartType('pie')" class="buttons" id="pie">Pie Chart</button>
+            <button onclick="chartType2('bar')" class="buttons">Bar Chart</button>
+
+            <button onclick="chartType2('pie')" class="buttons">Pie Chart</button>
+
+            <img src="resources/gon.jpeg" height=50px;>
 
         </div>
 
     </div>
 
-    <div id="datachart2finalanal">
+    <img src="resources/television.jpg" id="datachart2finalanalysisimg">
 
-        <img src="resources/madhouselogo.png" height="50px">
-
-        <br>
-        Madhouse took the top spot. Their art style
-
+    <div id="datachart2finalanalysiscontainer">
+        Television is the most popular type of animation by a landslide! Anime watchers prefer episodes over whole
+        movies
     </div>
 
     <div id="datachart3">
@@ -248,21 +200,27 @@
 
         <div id="datachart3buttons">
 
-            <button onclick="chartType('bar')" class="buttons" id="bar">Bar Chart</button>
+            <img src="resources/yuji.jpeg" height=50px;>
 
-            <button onclick="chartType('pie')" class="buttons" id="pie">Pie Chart</button>
+            <button onclick="chartType3('bardatachart3config')" class="buttons">Doughnut</button>
+
+            <button onclick="chartType3('doughnut')" class="buttons">Bar Chart</button>
+
+            <img src="resources/nobara.jpeg" height=50px;>
+
 
         </div>
 
     </div>
 
-    <div id="datachart3finalanal">
+    <img src="resources/aot.webp" id="datachart3finalanalysisimg">
 
-        <img src="resources/madhouselogo.png" height="50px">
+    <div id="datachart3finalanalysiscontainer">
+        Viewers tend to prefer anime with episodes' durations ranging from more than 60 minutes to 90 minutes!
+    </div>
 
-        <br>
-        Madhouse took the top spot. Their art style
-
+    <div id="datachart3finalanalysiscontainer2">
+        Episodes over 90 minutes were unpopular or not even common in the first place.
     </div>
 
     <div id="datachart4">
@@ -275,24 +233,218 @@
 
         <div id="datachart4buttons">
 
-            <button onclick="chartType('bar')" class="buttons" id="bar">Bar Chart</button>
+            <img src="resources/eren.jpeg" height=50px;>
 
-            <button onclick="chartType('pie')" class="buttons" id="pie">Pie Chart</button>
+            <button onclick="chartType4('genreconfig')" class="buttons">Pie Chart</button>
 
-        </div>
+            <button onclick="chartType4('pie')" class="buttons">Bar Chart</button>
 
-        <div id="datachart4final">
+            <img src="resources/mikasa.jpeg" height=50px;>
 
         </div>
 
     </div>
 
-    <div id="datachart4finalanal">
+    <div id="datachart4final">
 
-        <img src="resources/madhouselogo.png" height="50px">
+        <img src="resources/firstimage.jpg" id="datachart4finalfirstimage">
 
-        <br>
-        Madhouse took the top spot. Their art style
+        <img src="resources/secondimage.jpg" id="datachart4finalsecondimage">
+
+        <div id="datachart4finalsecondimageanalysis">
+            Drama seems to be the most popular genre in anime, at least for the year of 2023!
+        </div>
+
+    </div>
+
+    <div id="top10animetitle">
+
+        <h1 style="font-size:20px; font-family:'Montserrat'">Here are the top 10 animes: </h1>
+
+    </div>
+
+    <div id="top10animecontainer">
+
+        <img src="resources/fail.jpg" id="animephoto">
+
+        <div id="top10animetextcontainer">
+
+            <p style="font-family:'Montserrat'">Ranking: </p>
+            <p style=font-size:40px id="ranking"></p>
+            <p id="top10title"></p>
+            <p style="font-family:'Montserrat'">Genres: </p>
+            <p id="top10genre"></p>
+            <p style="font-family:'Montserrat'">Made by: </p>
+            <p id="top10studio"></p>
+            <p style="font-family:'Montserrat'">Type: </p>
+            <p id="top10type"></p>
+            <p style="font-family:'Montserrat'">Number of episodes: </h1>
+            <p id="top10episodes"></p>
+            <p style="font-family:'Montserrat'">Average duration in minutes is: </h1>
+            <p id="top10duration"></p>
+
+        </div>
+
+        <div id="top10animeicons">
+
+            <img src="resources/top10hxh.png" class="top10image" id="hxh">
+            <img src="resources/top10gintama2.webp" class="top10image" id="gintama2">
+            <img src="resources/top10gintamafinal.jpeg" class="top10image" id="gintamafinal">
+            <img src="resources/top10aot2.webp" class="top10image" id="aot2">
+            <img src="resources/top10kaguya.webp" class="top10image" id="kaguya">
+            <img src="resources/top10gintama.jpeg" class="top10image" id="gintama">
+            <img src="resources/top10steinsgate.jpeg" class="top10image" id="steinsgate">
+            <img src="resources/top10bleach.jpeg" class="top10image" id="bleach">
+            <img src="resources/top10fullmetal.jpeg" class="top10image" id="fullmetal">
+            <img src="resources/top10aotfinal.jpeg" class="top10image" id="aotfinal">
+        </div>
+
+    </div>
+
+    <div id="animebot">
+
+        <div id="animebottitle">
+
+            <h1 style="font-size:20px; font-family:'Montserrat'">Indecisive? Click on Gon and Killua to decide which
+                anime
+                you
+                should watch next! </h1>
+
+        </div>
+
+        <div id="randomanime">
+
+            <h1 id="randomtitle"></h1>
+
+            <h1 style="font-family:'Montserrat'">Genres: </h1>
+
+            <h1 id="randomgenre"></h1>
+
+            <h1 style="font-family:'Montserrat'">Made by: </h1>
+
+            <h1 id="randomstudio"></h1>
+
+            <h1 style="font-family:'Montserrat'">Type: </h1>
+
+            <h1 id="randomtype"></h1>
+
+            <h1 style="font-family:'Montserrat'">Number of episodes: </h1>
+
+            <h1 id="randomepisode"></h1>
+
+            <h1 style="font-family:'Montserrat'">Average duration in minutes is: </h1>
+
+            <h1 id="randomduration"></h1>
+
+        </div>
+
+        <div id="animebotrandomizer">
+
+            <img src="resources/hehe.jpeg" height=50px; id="randomizebutton">
+
+        </div>
+
+    </div>
+
+    <div id="referencescontainer">
+
+        <div id="references">
+
+            <h1>References: </h1>
+            <br> https://animeclips.online/jujutsu-kaisen/
+            <br> https://www.pinterest.com/pin/981221837535694293/
+            <br> https://fonts.google.com/specimen/Roboto//
+            <br> https://www.pinterest.com/pin/392657661272245244/
+            <br> https://wallpapercave.com/haikyuu-black-wallpapers
+            <br> https://tempenensis.tumblr.com/post/714183281486249984/i-didnt-think-this-panel-can-hit-harder-but-it
+            <br> https://wall.alphacoders.com/by_sub_category.php?id=200352&name=Gintama+Wallpapers
+            <br>
+            https://www.forbes.com/sites/olliebarder/2016/09/03/attack-on-titan-manga-now-has-over-60-million-copies-in-print/?sh=587ba0089575
+            <br>
+            https://www.google.com/search?q=demon+slayer+black+and+white+confused&tbm=isch&chips=q:demon+slayer+black+and+white+confused,online_chips:tanjiro:wXF_w-BMhC4%3D&hl=en&sa=X&ved=2ahUKEwj4ke-tsqj-AhUxhOYKHfY8BF8Q4lYoAXoECAEQKA&biw=1470&bih=809#imgrc=LoRM4MN_ccHR2M&imgdii=hmSR5ayWGtugzM
+            <br> https://wifflegif.com/tags/67748-killua-gifs?page=5
+            <br> https://www.youtube.com/watch?v=wqSGuix3I9E
+            <br>
+            https://www.wallpaperflare.com/black-and-white-clannad-anime-digital-wallpaper-anime-clannad-furukawa-nagisa-okazaki-tomoya-wallpaper-283879
+            <br> https://www.wallpaperflare.com/kaguya-sama-love-is-war-chika-fujiwara-black-background-wallpaper-gjkbe
+            <br> https://www.pinterest.com/pin/6755468182360988/
+            <br> https://www.animenewsnetwork.com/review/march-comes-in-like-a-lion/episode-37/.127042
+            <br> https://repotama.com/2021/11/159733/
+            <br> https://www.pinterest.com/pin/581879214376436566/
+            <br>
+            https://www.google.com/search?q=aot+marley+black+and+white&tbm=isch&ved=2ahUKEwilptywv6j-AhWS1HMBHc2YC58Q2-cCegQIABAA&oq=aot+marley+black+and+white&gs_lcp=CgNpbWcQAzoFCAAQgAQ6BggAEAgQHjoHCAAQGBCABFAAWOQMYIINaABwAHgBgAFXiAHoB5IBAjE2mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=MtE4ZKXFF5Kpz7sPzbGu-Ak&bih=809&biw=1470#imgrc=hM2r6bNqRCTZaM
+            <br> https://www.pinterest.com/pin/25684660368809128/
+            <br> https://www.menti.com/
+            <br> https://project-nerd.com/2020/08/07/anime-spotlight-hunter-x-hunter/
+            <br> https://gintama.fandom.com/wiki/Episode_237
+            <br> https://thecinemaholic.com/attack-on-titan-season-3-part-2/
+            <br> https://www.ign.com/articles/gintama-the-very-final-review
+            <br> https://tvtropes.org/pmwiki/pmwiki.php/Characters/KaguyaSamaLoveIsWar
+            <br> https://www.crunchyroll.com/series/GYQ4MKDZ6/gintama
+            <br> https://www.crunchyroll.com/series/GYWE7W5GY/steinsgate
+            <br> https://comicbook.com/anime/news/bleach-thousand-year-blood-war-anime-release/
+            <br> https://www.themoviedb.org/tv/37863/images/posters
+            <br> https://www.reddit.com/r/Rivamika/
+
+        </div>
+
+    </div>
+
+    <div id="finalwriteupcontainer">
+
+        <div id="finalwriteup">
+
+            For my final project, I did a data story on the top 250 anime of 2023. This differs from my initial idea of
+            Cafe
+            in a City, a website containing an interactive map that helps Singaporeans in cafe-hopping. This change is
+            due
+            to a lack of accurate data on Singapore's cafes. I eventually chose this topic because I am interested in
+            anime
+            and seeing the data got me curious as to what consumers' preferences were.
+            This will be useful information for both the consumers and the producers. The anime producers can
+            see what consumers' preferences are and make content catered to their wants. The website also shows anime
+            watchers which are the top 10 anime for 2023 and also has a random anime generator for if they do not know
+            what to watch next. For my website, I decided to make
+            it
+            black and white not only because I liked the monochrome aesthetic of it, but also to match the black and
+            white
+            panels of manga that animes usually are adapted from. Data might be boring, so I added pictures here and
+            there
+            to make the website nicer and more interesting, while also not distracting people from the charts. I also
+            added
+            a video at the start to capture attention while also displaying the beauty of anime. I made charts based on
+            different categories that I feel are relevant to producers and consumers of anime: one example being the
+            popularity of different genres in anime. I added buttons to change chart types as well so people can look at
+            the
+            information in different ways. To be honest, the designing of the website engaged me more. I viewed
+            differently
+            websites for inspiration: A24's website and StackedHomes' website mainly. I delved more into CSS than
+            Javascript
+            for my project but I learned more about both tools, as well as HTML. I figured out that I could use a text
+            editor online to help input my data (thankfully) because I had too many data points but was unable to use a
+            fetch() function to import my data. For my final project, I learned a lot of things through trial and error,
+            as
+            well as using Internet sources. Some of these things I did not put into the website as I decided it was not
+            useful for my website, but those that I did put on the website are credited. Personally, it was hard knowing
+            what to do with the charts as the customizations are not taught in class. I had to use the chart.js youtube
+            channel to learn more about them. This goes for CSS as well, I managed to learn a lot more about CSS through
+            the
+            Internet. While I believe that I tried my best, I still believe that maybe the data could be more deeply
+            analyzed. The colours of my chart are chosen deliberately and I do acknowledge that a black-grey colour
+            scheme
+            is not the best at highlighting data but it is my personal design choice. If given more time, I would have
+            hoped
+            to add a button to recommend anime based on the different categories but I decided that for the final
+            project,
+            just one that churns out a random anime from the top 250 is sufficient. Lastly, I would have made the
+            website
+            more interactive, giving information wherever users hover or click. The website is quite one-dimensional and
+            there are not any links to different pages for different features as I would like but for a data story final
+            project, I think it is fine. This was my first time coding and my first time designing a website and I found
+            this useful and fun as well, contrary to what I first expected signing up for this module. [623 words]
+
+
+        </div>
 
     </div>
 
